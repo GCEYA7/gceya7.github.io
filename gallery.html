@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGA Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-page">
+
+    <nav class="navbar gallery-nav">
+        <a href="index.html" class="logo">
+            <img src="RagaLogo.svg" alt="RAGA Logo"> </a>
+        <a href="index.html" class="btn-contact btn-back">Back to Home</a>
+    </nav>
+
+    <header class="gallery-header-section">
+        <h3 class="sub-heading" style="color: #8CC63F;">Our Legacy</h3>
+        <h1 class="main-heading" style="color: #111111;">Through the Lens</h1>
+        
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="golf">Golf</button>
+            <button class="filter-btn" data-filter="academics">Academics</button>
+            <button class="filter-btn" data-filter="life">Life Skills</button>
+        </div>
+    </header>
+
+    <section class="masonry-container">
+        <div class="masonry-item golf">
+            <img src="your-image-1.jpg" alt="Golf Training">
+        </div>
+        <div class="masonry-item academics">
+            <img src="your-image-2.jpg" alt="Classroom">
+        </div>
+        <div class="masonry-item life">
+            <img src="your-image-3.jpg" alt="Community Service">
+        </div>
+        <div class="masonry-item golf">
+            <img src="your-image-4.jpg" alt="Tournament">
+        </div>
+        <div class="masonry-item life">
+            <img src="your-image-5.jpg" alt="Leadership Camp">
+        </div>
+        <div class="masonry-item academics">
+            <img src="your-image-6.jpg" alt="Graduation">
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
