@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shop</title>
+    <style>
+        .gceya-footer {
+            background-color: #1E2024;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+    
+        .gceya-footer-top {
+            padding: 4rem 2rem;
+        }
+    
+        .gceya-footer-logo {
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: opacity 0.3s ease;
+        }
+    
+        .gceya-footer-logo:hover {
+            opacity: 0.8;
+        }
+    
+        .gceya-footer-logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+    
+        .gceya-footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+    
+        .gceya-footer-socials a {
+            display: inline-block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    
+        .gceya-footer-socials a:hover {
+            transform: translateY(-3px);
+            opacity: 0.6;
+        }
+    
+        .gceya-footer-socials img {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+    
+        .gceya-footer-bottom {
+            background-color: #151618;
+            padding: 1.5rem;
+            font-size: 0.95rem;
+            color: #A0AEC0;
+        }
+    
+        .gceya-footer-bottom span {
+            color: #0EA5E9;
+            font-weight: 600;
+        }
+    </style> 
+</head>
+
+    <!-- SHOP HERO SECTION -->
+    <header class="shop-hero">
+        <div class="shop-hero-content">
+            <h1>Official Merchandise</h1>
+            <p>Resources, apparel, and gear to keep you on track. Available for pickup at our center(Green House).</p>
+        </div>
+    </header>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="wetutoryoulearn.svg" alt="WeTutor YouLearn">
+        </a>
+    
+        <a href="index.html" class="btn-shop btn-back">Back to Home</a>
+    </nav>
+    <!-- FILTER TABS -->
+    <div class="shop-tabs">
+        <button class="tab-btn active" data-category="all">All Items</button>
+        <button class="tab-btn" data-category="resources">Resources</button>
+        <button class="tab-btn" data-category="apparel">Apparel</button>
+        <button class="tab-btn" data-category="services">Services</button>
+    </div>
+    
+    <!-- PRODUCT GRID -->
+    <section class="shop-grid">
+    
+        <!-- Item 1: Resource -->
+        <div class="product-card" data-category="resources">
+            <div class="product-image-placeholder">
+                <!-- Insert your image here --><img src="past-papers.jpeg" alt="Grade 12 Mathematics Revision Book">
+                
+            </div>
+            <div class="product-info">
+                <h3>Grade 12 Mathematics Book</h3>
+                <p class="price">R 150.00</p>
+                <!-- Notice the WhatsApp link format -->
+                <a href="https://wa.me/+27637198171?text=Hi,%20I%20would%20like%20to%20buy%20the%20Grade%2012%20Mathematics%20Revision%20Book."
+                    target="_blank" class="btn order-btn">Order via WhatsApp</a>
+            </div>
+        </div>
+    
+        <!-- Item 2: Resource -->
+        <div class="product-card" data-category="resources">
+            <div class="product-image-placeholder"><!-- Insert your image here --><img src="bag.jpeg" alt="WeTutor Bag">     
+                
+            </div>
+            <div class="product-info">
+                <h3>WeTutor Bag</h3>
+                <p class="price">R 120.00</p>
+                <a href="https://wa.me/+27637198171?text=Hi,%20I%20would%20like%20to%20buy%20the%20WeTutor%20Bag."
+                    target="_blank" class="btn order-btn">Order via WhatsApp</a>
+            </div>
+        </div>
+    
+        <!-- Item 3: Apparel -->
+        <div class="product-card" data-category="apparel">
+            <div class="product-image-placeholder"><!-- Insert your image here --><img src="hoodie.jpeg" alt="WeTutor Hoodie">     
+            
+            </div>
+            <div class="product-info">
+                <h3>Premium WeTutor Hoodie</h3>
+                <p class="price">R 350.00</p>
+                <a href="https://wa.me/+27637198171?text=Hi,%20I%20would%20like%20to%20order%20the%20WeTutor%20Hoodie.%20What%20sizes%20are%20available?"
+                    target="_blank" class="btn order-btn">Order via WhatsApp</a>
+            </div>
+        </div>
+    
+        <!-- Item 4: Services -->
+        <div class="product-card" data-category="services">
+            <div class="product-image-placeholder">
+                <span>Printing Services</span>
+            </div>
+            <div class="product-info">
+                <h3>Document Printing</h3>
+                <p class="price">From R 5.00</p>
+                <a href="https://wa.me/+27744886619?text=Hi,%20I%20need%20some%20documents%20printed." target="_blank"
+                    class="btn order-btn">Contact for Quote</a>
+            </div>
+        </div>
+    
+    </section>
+    <footer class="gceya-footer">
+        <div class="gceya-footer-top">
+            <a href="#home" class="gceya-footer-logo">
+                <img src="gceya7.svg" alt="Gceya7 Logo">
+            </a>
+    
+            <div class="gceya-footer-socials">
+                <a href="https://github.com/gceya7" target="_blank">
+                    <img src="github.svg" alt="GitHub">
+                </a>
+                <a href="https://wa.me/+27744886619" target="_blank">
+                    <img src="whatsapp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/akha_gceya7/" target="_blank">
+                    <img src="instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=gakhanani@gmail.com" target="_blank">
+                    <img src="google.svg" alt="Google">
+                </a>
+            </div>
+        </div>
+    
+        <div class="gceya-footer-bottom">
+            © 2026 <span>Gceya7</span> All Rights Reserved, Inc.
+        </div>
+    </footer>
+    <script>// Grab the tabs and the products
+        const filterBtns = document.querySelectorAll('.shop-tabs .tab-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Remove active class from all buttons, then add it to the clicked one
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // 2. Find out which category was clicked (e.g., 'apparel')
+                const targetCategory = btn.getAttribute('data-category');
+
+                // 3. Loop through all products to show/hide them
+                products.forEach(product => {
+                    const productCategory = product.getAttribute('data-category');
+
+                    if (targetCategory === 'all' || targetCategory === productCategory) {
+                        // If it's a match (or 'all' is clicked), show it
+                        product.classList.remove('hide-product');
+                    } else {
+                        // If it doesn't match, hide it
+                        product.classList.add('hide-product');
+                    }
+                });
+            });
+        });</script>
+</body>
+</html>
