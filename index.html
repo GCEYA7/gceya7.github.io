@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Gceya7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#home" class="logo"><img src="gceya7.svg" alt="Gceya7 logo"></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">My Projects</a></li>
+
+            <li class="mobile-contact"><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="contact-btn">Contact</a>
+    </nav>
+
+    <div id="hireModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Let's Work Together</h2>
+            <form action="https://formspree.io/f/xykvbbzo" method="POST" enctype="multipart/form-data">
+                <div class="form-group-row">
+                    <input type="text" name="name" placeholder="First Name" required>
+                    <input type="text" name="surname" placeholder="Surname" required>
+                </div>
+                <div class="form-group-row">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <input type="tel" name="whatsapp" placeholder="WhatsApp Number">
+                </div>
+                <p class="form-note">Please provide at least one contact method.</p>
+                <select name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="web-design">Web Design</option>
+                    <option value="development">Web Development</option>
+                    <option value="app-design">App Design</option>
+                </select>
+                <div class="file-upload-group">
+                    <label for="attachment">Upload a design, wireframe, or reference (Optional)</label>
+                    <input type="file" id="attachment" name="attachment" accept="image/*,.pdf">
+                </div>
+                <textarea name="message" placeholder="Tell me about your project..." rows="4" required></textarea>
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    <div id="contactModal" class="modal">
+        <div class="modal-content contact-modal-content">
+            <span class="close-contact-btn close-btn">&times;</span>
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out through any of these platforms. I try to respond within 24 hours.</p>
+    
+            <div class="contact-links-grid">
+                <a href="https://github.com/gceya7" target="_blank" class="contact-link-item">
+                    <img src="github.svg" alt="GitHub">
+                    <span>github.com/gceya7</span>
+                </a>
+                <a href="https://wa.me/+27744886619" target="_blank" class="contact-link-item">
+                    <img src="whatsapp.svg" alt="WhatsApp">
+                    <span>+27 74 488 6619</span>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=gakhanani@gmail.com" target="_blank"
+                    class="contact-link-item">
+                    <img src="google.svg" alt="Email">
+                    <span>gakhanani@gmail.com</span>
+                </a>
+                <a href="https://www.instagram.com/akha_gceya7/" target="_blank" class="contact-link-item">
+                    <img src="instagram.svg" alt="Instagram">
+                    <span>@akha_gceya7</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text-wrapper">
+                <p class="hero-subtitle">Hi I am</p>
+                <p class="hero-name">Akhanani Gceya</p>
+                <h1 class="hero-heading">Comp Sci<br><span class="indent">Student</span></h1>
+                <p class="hero-description">I’m a 2nd-year student dedicated to crafting seamless digital experiences.
+                    With a growing focus in UI/UX design, front-end development, and Java programming, I thrive at the
+                    intersection of aesthetics and logic. Driven by a passion for tech and a long-term dream of taking
+                    to the skies as an aviator.</p>
+                <a href="#hire" class="btn">Hire Me</a>
+            </div>
+
+            <div class="hero-visual-wrapper">
+                <img src="heroimage.png" alt="Akhanani Profile" class="hero-image">
+                <div class="social-icons">
+                    <a href="https://github.com/gceya7" target="_blank"><img src="github.svg" alt="GitHub"></a>
+                    <a href="https://wa.me/+27744886619" target="_blank"><img src="whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=gakhanani@gmail.com" target="_blank"><img
+                            src="google.svg" alt="Google"></a>
+                    <a href="https://www.instagram.com/akha_gceya7/" target="_blank"><img src="instagram.svg"
+                            alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-text-content">
+            <h2>About Me</h2>
+            <p>I’ve always been driven by an insatiable curiosity to figure out how things work. What started as a
+                desire to learn new digital skills has evolved into a full-fledged pursuit of my Computer Science
+                degree. I love diving into the deep end of problem-solving. Now, I’m putting these skills to work on
+                real-world projects. I am building a career in tech not just because I love creating digital
+                experiences, but because it is the engine for my ultimate ambition. Every line of code I write and every
+                design I ship is a strategic step toward completing my degree and funding my training to become an
+                aviator.</p>
+        </div>
+        <div class="about-skills-progress-bars">
+            <div class="skill-item">
+                <label>Web Design</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <label>Web Development</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <label>Object Oriented Programming in JAVA</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <label>AI Automation</label>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-header">
+            <h2>Services</h2>
+            <p>What I can actually do for you</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="web-design-icon.svg" alt="Web Design" class="service-icon">
+                <h3>Web Design</h3>
+                <p>Crafting user-centered interfaces and high-fidelity prototypes.</p>
+            </div>
+            <div class="service-card">
+                <img src="development-icon.svg" alt="Development" class="service-icon">
+                <h3>Development</h3>
+                <p>Transforming designs into fast, responsive websites. I write clean code to ensure your site looks
+                    sharp and performs flawlessly across all devices.</p>
+            </div>
+            <div class="service-card">
+                <img src="app-design-icon.svg" alt="App Design" class="service-icon">
+                <h3>App Design</h3>
+                <p>Designing sleek, modern mobile experiences. I apply mobile-first principles to create intuitive,
+                    app-like layouts that feel completely natural in the user's hands.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects-header">
+            <h2>My Projects</h2>
+            <p>A showcase of my technical and creative journey. From complex algorithms to pixel-perfect user
+                interfaces, explore the real-world applications I’ve built to solve problems and elevate digital
+                experiences.</p>
+        </div>
+
+        <div class="project-tabs">
+            <button class="tab-btn active" data-target="java-projects">Java Programmes</button>
+            <button class="tab-btn" data-target="web-design">Web Design</button>
+            <button class="tab-btn" data-target="app-design">App Design</button>
+            <button class="tab-btn" data-target="dev-interfaces">Developed Websites</button>
+        </div>
+
+        <div class="tab-content active" id="java-projects">
+            <div class="spotify-tracklist">
+
+        <div class="track-strip">
+            <img src="java-icon.svg" alt="Java" class="track-icon">
+        
+            <div class="track-info">
+                <h4>Hotel Management System</h4>
+                <p>A mini full-stack hotel-management system integrating front-end UI with complex back-end logic</p>
+            </div>
+        
+            <div class="track-actions">
+                <a href="hotel-system/" target="_blank" class="track-action view-ui">View UI ↗</a>
+        
+                <div class="track-action open-code" data-code="hotel-java-code" data-title="HotelManagement.java">View Code
+                </div>
+            </div>
+        </div>
+        
+        <div class="hidden-code-container">
+            <div id="hotel-java-code">
+                import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class hotelcostcalculator {
+    @SuppressWarnings("ConvertToTryWithResources")
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+//----------------------------------------------------------------------------------------------------//
+        // Hotel structure code
+        /*
+         * 1 -- Welcome message 
+         * 2 -- Display cost for customers (maximum rooms to rent out = 30)
+         *         ROOM TYPE        COST
+         *         standard         400
+         *         standard vip     600
+         *         high vip         1000
+         * 3 -- Discounts
+         *      Standard rooms: > 5 (12% off), > 10 (50% off)
+         *      Standard VIP: > 2 (10% off), > 5 (30% off), > 10 (50% off)
+         *      High VIP: > 2 (10% off), > 10 (40% off)
+         *      Returning customers get an additional 3% off
+         * 4 -- Calculations 
+         * 5 -- Display results
+        */
+//----------------------------------POST CODE---------------------------------------------------------//
+// CREATE ARRAY OF PAST USERS
+
+        ArrayList<String> users = new ArrayList<>(Arrays.asList("AKHANANI GCEYA", "LIONEL MESSI"));
+
+        System.out.println("Welcome to Akha Gceya's Hotel! Please enter your name: ");
+        String userName = scanner.nextLine();
+        System.out.println();
+
+        // Check if the user is a returning customer
+        if (users.contains(userName.toUpperCase())) {
+            System.out.println("Welcome back, " + userName + "! As a valued returning guest, you get an exclusive 3% discount on your total bill.");
+        } else {
+            System.out.println("Hello, " + userName + "! We’re excited to have you at Akha Gceya's Hotel and look forward to providing you with excellent service.");
+            users.add(userName);
+        }
+
+        System.out.println();
+//-------------------------------MENU DISPLAY ---------------------------------------------------------//
+        System.out.println("--------------------- MENU ----------------------------");
+        System.out.println("           ROOM TYPE           COST PER ROOM");
+        System.out.println("           Standard            R400");
+        System.out.println("           Standard VIP        R600");
+        System.out.println("           High VIP            R1000");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------------- DISCOUNTS ------------------------");
+        System.out.println("Standard: > 5 rooms (12% off), > 10 rooms (50% off)");
+        System.out.println("Standard VIP: > 2 rooms (10% off), > 5 rooms (30% off), > 10 rooms (50% off)");
+        System.out.println("High VIP: > 2 rooms (10% off), > 10 rooms (40% off)");
+        System.out.println("Returning customers: Extra 3% off the discounted total");
+        System.out.println();
+//-------------------------------USER INPUT-------------------------------------------------//
+        System.out.println("What type of room would you like to rent? Enter [Standard, Standard VIP, High VIP]: ");
+        String roomType = scanner.nextLine().toLowerCase().replaceAll("\\s", "").trim();
+        System.out.println("How many " + roomType + " rooms would you like to rent? (Enter a number from 1 to 30): ");
+        int roomQty = scanner.nextInt();
+        System.out.println();
+        System.out.println("You have selected " + roomQty + " " + roomType + " room(s). Please wait while we calculate your total cost...");
+//-------------------------------CALCULATIONS---------------------------------------------//
+        double disCost = 0;
+        switch (roomType) {
+            case "standard" -> {
+                if (roomQty > 10) {
+                    int cost = roomQty * 400;
+                    disCost = cost - cost * 0.5;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty > 5) {
+                    int cost = roomQty * 400;
+                    disCost = cost - cost * 0.12;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else {
+                    int cost = roomQty * 400;
+                    disCost = cost;
+                    System.out.println("Total Cost: R" + disCost);
+                }
+            }
+            case "standardvip" -> {
+                if (roomQty > 10) {
+                    int cost = roomQty * 600;
+                    disCost = cost - cost * 0.5;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty > 5) {
+                    int cost = roomQty * 600;
+                    disCost = cost - cost * 0.3;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty > 2) {
+                    int cost = roomQty * 600;
+                    disCost = cost - cost * 0.1;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else {
+                    int cost = roomQty * 600;
+                    disCost = cost;
+                    System.out.println("Total Cost: R" + disCost);
+                }
+            }
+            case "highvip" -> {
+                if (roomQty > 10) {
+                    int cost = roomQty * 1000;
+                    disCost = cost - cost * 0.4;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty > 2) {
+                    int cost = roomQty * 1000;
+                    disCost = cost - cost * 0.1;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else {
+                    int cost = roomQty * 1000;
+                    disCost = cost;
+                    System.out.println("Total Cost: R" + disCost);
+                }
+            }
+            default -> {System.out.println("Invalid Choice!! Try Again");}
+        }
+
+        if (users.contains(userName.toUpperCase())) {
+            System.out.println("As a returning customer, you get an extra 3% off your discounted cost!");
+            double finalCost = disCost - (disCost * 0.03);
+            System.out.println("Final Cost after all discounts: R" + finalCost);
+        } else {
+            System.out.println("Thank you, " + userName + "! We hope to see you again so you can enjoy our 3% returning customer discount.");
+        }
+
+        scanner.close();
+    }
+}
+
+            </div>
+        </div>
+            </div>
+            </div>
+
+        <div class="tab-content" id="web-design">
+            <div class="design-grid">
+                <div class="design-card" data-full-image="profile-full.png">
+                    <img src="profile.png" alt="Gceya Profile Thumbnail" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <img src="figma.svg" alt="Figma" class="figma-icon">
+                        <div class="card-text">
+                            <h4>Gceya Profile Landing Page</h4>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="design-card" data-full-image="raga-full.png">
+                    <img src="raga.png" alt="RAGA Thumbnail" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <img src="figma.svg" alt="Figma" class="figma-icon">
+                        <div class="card-text">
+                            <h4>Raymond Ackerman Golf Academy Landing Page</h4>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="design-card" data-full-image="wetutoryoulearn-full.png">
+                    <img src="wetutoryoulearn.png" alt="Wetutoryoulearn Thumbnail" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <img src="figma.svg" alt="Figma" class="figma-icon">
+                        <div class="card-text">
+                            <h4>Wetutoryoulearn Business Page</h4>
+                            <p>Web Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="app-design">
+            <div class="design-grid">
+                <div class="design-card" data-full-image="sabrina-full.png">
+                    <img src="sabrina.png" alt="Music App Thumbnail" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <img src="figma.svg" alt="Figma" class="figma-icon">
+                        <div class="card-text">
+                            <h4>Sabrina Carpenter UI</h4>
+                            <p>App Design</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-content" id="dev-interfaces">
+            <div class="design-grid">
+        
+                <a href="raga/" target="_blank" class="live-site-link">
+                    <div class="design-card live-site-card">
+                        <img src="raga.png" alt="RAGA Thumbnail" class="card-bg">
+                        <div class="card-overlay live-overlay"></div>
+                        <div class="card-content">
+                            <img src="github.svg" alt="Code" class="figma-icon">
+                            <div class="card-text">
+                                <h4>Raymond Ackerman Golf Academy</h4>
+                                <p class="live-text">Live Website ↗</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="wetutoryoulearn/" target="_blank" class="live-site-link">
+                    <div class="design-card live-site-card">
+                        <img src="wetutoryoulearn.png" alt="WeTutorYouLearn Thumbnail" class="card-bg">
+                        <div class="card-overlay live-overlay"></div>
+                        <div class="card-content">
+                            <img src="github.svg" alt="Code" class="figma-icon">
+                            <div class="card-text">
+                                <h4>WeTutorYouLearn Platform</h4>
+                                <p class="live-text">Live Website ↗</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        
+            </div>
+        </div>
+    </section>
+
+    <div id="codeModal" class="modal lightbox">
+        <span class="close-code">&times;</span>
+        <div class="code-container">
+            <div class="code-header">
+                <span class="mac-btn red"></span>
+                <span class="mac-btn yellow"></span>
+                <span class="mac-btn green"></span>
+                <span id="code-title" class="code-filename">Algorithm.java</span>
+            </div>
+            <pre><code id="code-display">/* Code will load here */</code></pre>
+        </div>
+    </div>
+
+    <div id="designLightbox" class="modal lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-scroll-container">
+            <img src="" alt="Full Design View" id="lightbox-image">
+        </div>
+    </div>
+
+    <footer class="gceya-footer">
+        <div class="gceya-footer-top">
+            <a href="#home" class="gceya-footer-logo">
+                <img src="gceya7.svg" alt="Gceya7 Logo">
+            </a>
+
+            <div class="gceya-footer-socials">
+                <a href="https://github.com/gceya7" target="_blank">
+                    <img src="github.svg" alt="GitHub">
+                </a>
+                <a href="https://wa.me/+27744886619" target="_blank">
+                    <img src="whatsapp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/akha_gceya7/" target="_blank">
+                    <img src="instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=gakhanani@gmail.com" target="_blank">
+                    <img src="google.svg" alt="Google">
+                </a>
+            </div>
+        </div>
+
+        <div class="gceya-footer-bottom">
+            © 2026 <span>Gceya7</span> All Rights Reserved, Inc.
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.navlinks');
+        const navItems = document.querySelectorAll('.navlinks a');
+
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // --- Hire Me Modal Logic ---
+        const hireBtns = document.querySelectorAll('a[href="#hire"]');
+        const modal = document.getElementById('hireModal');
+        const closeBtn = document.querySelector('.close-btn');
+
+        if (modal) {
+            hireBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+            }
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+
+            const form = modal.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    const email = form.querySelector('[name="email"]').value;
+                    const whatsapp = form.querySelector('[name="whatsapp"]').value;
+
+                    if (!email && !whatsapp) {
+                        e.preventDefault();
+                        alert('Please provide either an email address or a WhatsApp number so I can contact you.');
+                    }
+                });
+            }
+        }
+
+        // --- Projects Tab Logic ---
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.classList.add('active');
+                }
+            });
+        });
+
+        // --- Code Viewer Logic (BULLETPROOF) ---
+        const codeBtns = document.querySelectorAll('.open-code');
+        const codeModal = document.getElementById('codeModal');
+        const closeCodeBtn = document.querySelector('.close-code');
+        const codeDisplay = document.getElementById('code-display');
+        const codeTitle = document.getElementById('code-title');
+
+        codeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (!codeModal) {
+                    alert("System Check: The Code Modal HTML is missing from your file.");
+                    return;
+                }
+
+                const codeId = btn.getAttribute('data-code');
+                const fileName = btn.getAttribute('data-title');
+
+                // SAFETY CHECK: Does the hidden div exist?
+                const hiddenCodeBlock = document.getElementById(codeId);
+
+                if (!hiddenCodeBlock) {
+                    alert("System Check: I cannot find the hidden Java code for: " + codeId + " - Please make sure you added the div with this ID!");
+                    return; // Stops the code here so the website doesn't crash!
+                }
+
+                const rawCode = hiddenCodeBlock.innerText;
+                if (codeDisplay && codeTitle) {
+                    codeDisplay.innerText = rawCode;
+                    codeTitle.innerText = fileName;
+                }
+
+                codeModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        if (closeCodeBtn && codeModal) {
+            closeCodeBtn.addEventListener('click', () => {
+                codeModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            codeModal.addEventListener('click', (e) => {
+                if (e.target === codeModal) {
+                    codeModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // --- Design Lightbox Logic (BULLETPROOF) ---
+        const designCards = document.querySelectorAll('.design-card:not(.live-site-card)');
+        const lightbox = document.getElementById('designLightbox');
+        const lightboxImg = document.getElementById('lightbox-image');
+        const closeLightbox = document.querySelector('.close-lightbox');
+
+        designCards.forEach(card => {
+            card.addEventListener('click', () => {
+                if (!lightbox || !lightboxImg) {
+                    alert("System Check: The Lightbox HTML is missing from your file.");
+                    return; // Stops the crash
+                }
+
+                const fullImageSrc = card.getAttribute('data-full-image');
+                lightboxImg.src = fullImageSrc;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        if (closeLightbox && lightbox) {
+            closeLightbox.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                lightboxImg.src = "";
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target.classList.contains('lightbox-scroll-container')) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    lightboxImg.src = "";
+                }
+            });
+        }
+
+        // --- Contact Modal Logic ---
+            const contactBtn = document.querySelector('.contact-btn');
+            const contactModal = document.getElementById('contactModal');
+            const closeContactBtn = document.querySelector('.close-contact-btn');
+
+            if (contactBtn && contactModal) {
+                contactBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Stops the browser from trying to scroll
+                    contactModal.classList.add('active');
+
+                    // If they click 'Contact' on mobile, close the mobile menu first
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    }
+                });
+            }
+
+            if (closeContactBtn && contactModal) {
+                closeContactBtn.addEventListener('click', () => {
+                    contactModal.classList.remove('active');
+                });
+            }
+
+            // Allow closing by clicking the background shadow
+            window.addEventListener('click', (e) => {
+                if (e.target === contactModal) {
+                    contactModal.classList.remove('active');
+                }
+            });
+    </script>
+</body>
+
+</html>
