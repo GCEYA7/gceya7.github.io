@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GCEYA7 System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loading-screen">
+        <h1 class="logo"><span class="accent">
+                <>
+            </span>GCEYA7<span class="accent"></></span></h1>
+    </div>
+
+    <div id="app-content" class="hidden">
+
+        <header class="app-header">
+            <div class="greeting">
+                <h2 id="dynamic-greeting" class="mint-text">Good Morning</h2>
+                <p>Akha</p>
+            </div>
+            <div class="profile-pic"></div>
+        </header>
+
+        <div class="segment-wrapper">
+            <div class="segment-control glass-panel">
+                <button class="segment-btn active" id="btn-home">Home</button>
+                <button class="segment-btn" id="btn-tasks">Tasks</button>
+            </div>
+        </div>
+
+        <div id="view-home">
+        
+            <div class="calendar-section">
+                <h3 id="current-month" class="month-label">June</h3>
+                <div class="date-tracker" id="calendar-track">
+                </div>
+            </div>
+        
+            <div class="cards-layout">
+            
+                <div class="card glass-panel momentum-card" id="card-momentum">
+                    <h4 class="text-muted">Daily Momentum</h4>
+                
+                    <div class="momentum-layout">
+                        <div class="rings-container">
+                            <svg class="progress-rings" width="160" height="160">
+                                <circle class="ring-track" cx="80" cy="80" r="70"></circle>
+                                <circle class="ring-fill ring-academics" cx="80" cy="80" r="70"></circle>
+                
+                                <circle class="ring-track" cx="80" cy="80" r="50"></circle>
+                                <circle class="ring-fill ring-skills" cx="80" cy="80" r="50"></circle>
+                
+                                <circle class="ring-track" cx="80" cy="80" r="30"></circle>
+                                <circle class="ring-fill ring-habits" cx="80" cy="80" r="30"></circle>
+                            </svg>
+                            <div class="momentum-score" id="center-text-box">
+                                <span id="score-value">0</span>
+                            
+                            </div>
+                        </div>
+                
+                        <div class="right-panel" style="flex: 1; position: relative;">
+                
+                            <div id="momentum-message"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; transition: opacity 0.5s ease;">
+                            </div>
+                
+                            <div class="graph-section hidden" id="weekly-graph-container" style="opacity: 0; transition: opacity 0.8s ease;">
+                                <h5 class="graph-title">Weekly Momentum</h5>
+                            
+                                <div class="graph-axes-container">
+                                    <div class="y-axis">
+                                        <span>100</span>
+                                        <span>50</span>
+                                        <span>0</span>
+                                    </div>
+                            
+                                    <div class="x-axis-content" style="position: relative; flex: 1; display: flex; flex-direction: column;">
+                                        <svg id="line-graph-svg" width="100%" height="100%" style="overflow: visible; flex: 1;"></svg>
+                                        <div id="graph-labels" class="graph-labels-container"></div>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card glass-panel" id="card-math">
+                    <h4 class="text-muted">Mathematics</h4>
+                </div>
+            
+                <div class="card glass-panel" id="card-cs">
+                    <h4 class="text-muted">Comp Sci</h4>
+                </div>
+            
+                <div class="card glass-panel" id="card-horizon">
+                    <h4 class="text-muted">The Horizon</h4>
+                </div>
+            
+            </div>
+        </div>
+
+        <div id="view-tasks" class="hidden">
+        
+            <div class="task-lane" id="lane-habits">
+                <div class="lane-header">
+                    <h3 class="mint-text">Daily Sprints</h3>
+                    <span class="lane-subtitle">The Foundation</span>
+                </div>
+            
+                <div class="add-task-box glass-panel">
+                    <input type="text" id="new-habit-input" placeholder="Add a new daily habit...">
+                    <button id="btn-add-habit">+</button>
+                </div>
+            
+                <div class="habit-list collapsed" id="habit-container">
+                </div>
+            
+                <div class="view-more-container">
+                    <button id="btn-view-more-habits" class="hidden">View More</button>
+                </div>
+            </div>
+        
+        </div>
+
+        <nav class="bottom-nav glass-panel">
+            <div class="nav-item active">Home</div>
+            <div class="nav-item">Grind</div>
+            <div class="nav-item">Craft</div>
+            <div class="nav-item">Horizon</div>
+        </nav>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
