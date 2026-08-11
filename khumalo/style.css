@@ -481,7 +481,7 @@ body {
     width: 100%;
     max-width: 500px;
     aspect-ratio: 1 / 1;
-    background-color: #e2e2e2;
+    background-color: var(--img-bg-color);
     /* Matching the grey placeholder color */
     border-radius: 4px;
     display: flex;
@@ -734,7 +734,7 @@ body {
 .img-slot-gallery {
     width: 800px;
     height: 500px;
-    background-color: #e2e2e2;
+    background-color: var(--img-bg-color);
     border-radius: 6px;
     display: flex;
     justify-content: center;
