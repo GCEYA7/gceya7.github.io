@@ -1,0 +1,1092 @@
+/* --- Global Variables (Updated) --- */
+:root {
+    /* Colors */
+    --bg-color: #f1f1f1;
+    --text-color: #000000;
+    --btn-solid-bg: #000000;
+    --btn-solid-text: #ffffff;
+    --btn-outline-border: #000000;
+
+    /* Typography */
+    --font-family: 'Arial', sans-serif;
+    --nav-font-size: 16px;
+    --font-weight-regular: 400;
+
+    /* Spacing */
+    --nav-padding-y: 10px;
+    --nav-padding-x: 64px;
+    /* Removed max-width variable entirely */
+    --hero-padding-y: 80px;
+    --hero-padding-x: 64px;
+    --img-bg-color: #e2e2e2;
+    --card-bg: #8a8a8a;
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Navbar Layout (Updated) --- */
+.site-header {
+    width: 100%;
+    background-color: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-padding-y) var(--nav-padding-x);
+    width: 100%;
+    /* Stretches edge-to-edge */
+    /* Removed max-width and margin: 0 auto */
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* Space between links and buttons */
+}
+
+/* --- Nav Links --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a,
+.dropdown-toggle {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--nav-font-size);
+    font-weight: var(--font-weight-regular);
+    font-family: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- Dropdown Specifics --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-color);
+    border: 1px solid var(--btn-outline-border);
+    list-style: none;
+    min-width: 160px;
+    padding: 8px 0;
+    margin-top: 10px;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 16px;
+}
+
+/* --- Buttons --- */
+.nav-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    padding: 10px 24px;
+    font-size: var(--nav-font-size);
+    font-family: inherit;
+    font-weight: var(--font-weight-regular);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--btn-outline-border);
+    color: var(--text-color);
+}
+
+.btn-solid {
+    background-color: var(--btn-solid-bg);
+    border: 1px solid var(--btn-solid-bg);
+    color: var(--btn-solid-text);
+}
+
+/* --- Hamburger Menu (Hidden on Desktop) --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+}
+
+/* =========================================
+   MEDIA QUERY: Mobile Responsiveness : Navbar
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar {
+        padding: var(--nav-padding-y) 24px;
+        /* Reduced side padding for mobile */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide action buttons completely on mobile as requested */
+    .nav-actions {
+        display: none;
+    }
+
+    /* Convert nav links to a mobile slide-out/dropdown menu */
+    .nav-content {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        width: 100%;
+        align-items: flex-start;
+        padding: 24px;
+        transition: left 0.3s ease;
+        border-bottom: 1px solid var(--btn-outline-border);
+        z-index: 99;
+    }
+
+    .nav-content.active {
+        left: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* Mobile dropdown styling */
+    .dropdown-menu {
+        position: static;
+        border: none;
+        padding-left: 16px;
+        margin-top: 5px;
+    }
+}
+
+/* =========================================
+   HERO SECTION (DESKTOP)
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    /* Adjusts based on screen height */
+    overflow: hidden;
+    /* Contains the overflowing image track */
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+/* --- Foreground Text Mask --- */
+.hero-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 10;
+    /* Keeps it above the images */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--hero-padding-y) var(--hero-padding-x);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    /* Scaled large for desktop */
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-color);
+}
+
+.hero-content .subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+}
+
+/* --- Background Scrolling Track --- */
+.hero-image-track {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* Starts exactly where the text mask ends */
+    width: 100vw;
+    /* Spans wider than the screen to allow movement */
+    height: 100%;
+    padding: var(--hero-padding-y) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 1;
+    /* Sits behind the text overlay */
+}
+
+.hero-image-row {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scroll-left 40s linear infinite;
+    /* Smooth infinite scroll */
+}
+
+/* Misaligning the bottom row */
+.bottom-row {
+    margin-left: -150px;
+}
+
+/* --- Image Placeholders --- */
+.img-slot {
+    width: 320px;
+    height: 280px;
+    background-color: var(--img-bg-color);
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Creating the standard image placeholder icon */
+.img-slot::after {
+    content: '';
+    width: 48px;
+    height: 48px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23b0b0b0" xmlns="http://www.w3.org/2000/svg"><path d="M21 19V5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19ZM8.5 13.5L11 16.5L14.5 12L19 18H5L8.5 13.5Z"/></svg>');
+    background-size: cover;
+}
+
+/* --- Scrolling Animation --- */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================================
+   MEDIA QUERY: Mobile Responsiveness (Hero)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+        /* Let the content dictate the height */
+        padding-top: 10px;
+    }
+
+    /* --- Reset Image Track (Moves to Top) --- */
+    .hero-image-track {
+        position: relative;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        padding: 10px 0;
+        /* Reduced padding for mobile */
+        order: 1;
+        /* Forces it to the top in the flex column */
+        z-index: 1;
+    }
+
+    /* Scale down images slightly for mobile view */
+    .img-slot {
+        width: 240px;
+        height: 200px;
+    }
+
+    /* Reduce the gap and offset for mobile */
+    .hero-image-row {
+        gap: 16px;
+    }
+
+    .bottom-row {
+        margin-left: -80px;
+    }
+
+    /* --- Reset Text Overlay (Moves to Bottom) --- */
+    .hero-text-overlay {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 40px 24px 80px 24px;
+        /* Standard mobile side padding */
+        order: 2;
+        /* Forces it below the images */
+        background-color: transparent;
+        /* Masking no longer needed */
+        z-index: 2;
+    }
+
+    /* Adjust Typography for Mobile */
+    .hero-content h1 {
+        font-size: 2.5rem;
+        /* Scaled down from 4rem */
+        margin-bottom: 16px;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    /* Note: In your mobile screenshot, the second button says "Work" instead of "Contact", 
+       but the layout remains the same side-by-side flex. */
+    .hero-actions {
+        gap: 12px;
+    }
+}
+
+/* =========================================
+   ABOUT SECTION (DESKTOP)
+   ========================================= */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--hero-padding-y) var(--nav-padding-x);
+    background-color: var(--bg-color);
+    gap: 64px;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.section-subheading {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-color);
+}
+
+.about-content .description {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+    color: var(--text-color);
+}
+
+/* --- List Styling --- */
+.about-list {
+    list-style: none;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* --- Text Button (New Variant) --- */
+.about-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: var(--nav-font-size);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+}
+
+/* --- Image Placeholder --- */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-slot-large {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    background-color: #e2e2e2;
+    /* Matching the grey placeholder color */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-slot-large::after {
+    content: '';
+    width: 64px;
+    height: 64px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23b0b0b0" xmlns="http://www.w3.org/2000/svg"><path d="M21 19V5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19ZM8.5 13.5L11 16.5L14.5 12L19 18H5L8.5 13.5Z"/></svg>');
+    background-size: cover;
+}
+
+/* =========================================
+   MEDIA QUERY: Mobile Responsiveness (About)
+   ========================================= */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 40px 24px;
+        /* Standard mobile padding */
+        gap: 40px;
+    }
+
+    .about-content {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .about-image {
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+
+    .img-slot-large {
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 2.25rem;
+        /* Scaled down for mobile */
+    }
+}
+
+/* =========================================
+   SERVICES SECTION (DESKTOP)
+   ========================================= */
+.services {
+    padding: var(--hero-padding-y) var(--nav-padding-x);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.services-header {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-header h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 16px 0;
+    color: var(--text-color);
+}
+
+.services-header .subtitle {
+    font-size: 1.125rem;
+    color: var(--text-color);
+}
+
+/* --- Services Grid --- */
+.services-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    /* Ensures cards are equal height */
+}
+
+.service-card {
+    flex: 1;
+    background-color: var(--card-bg);
+    padding: 48px 32px;
+    border-radius: 6px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Placeholder for the background watermark icon shown in design */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23b0b0b0" xmlns="http://www.w3.org/2000/svg"><path d="M21 19V5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19ZM8.5 13.5L11 16.5L14.5 12L19 18H5L8.5 13.5Z"/></svg>');
+    background-size: cover;
+    opacity: 0.15;
+    /* Keeps it faint behind the text */
+    pointer-events: none;
+}
+
+.service-icon {
+    color: var(--text-color);
+    margin-bottom: 32px;
+}
+
+.service-card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card .description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 32px;
+    flex-grow: 1;
+    /* Pushes the 'Learn' button to the bottom */
+    position: relative;
+    z-index: 2;
+}
+
+.service-card .btn-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   MEDIA QUERY: Mobile Responsiveness (Services)
+   ========================================= */
+@media (max-width: 768px) {
+    .services {
+        padding: 60px 24px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .services-header h2 {
+        font-size: 2.5rem;
+        /* Scale down the main heading */
+    }
+
+    .services-cards {
+        flex-direction: column;
+        /* Stacks the cards vertically */
+        gap: 24px;
+    }
+}
+
+/* =========================================
+   GALLERY SECTION (DESKTOP)
+   ========================================= */
+.gallery {
+    padding: var(--hero-padding-y) 0;
+    /* No side padding so track can bleed to edge if needed, or controlled within */
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.gallery-header h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 16px 0;
+    color: var(--text-color);
+}
+
+/* --- Filter Navigation --- */
+/* --- Filter Navigation (Consistent with global button styles) --- */
+.gallery-filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--btn-outline-border);
+    padding: 10px 24px;
+    border-radius: 6px;
+    /* Matched with global .btn corner rounding */
+    cursor: pointer;
+    font-size: var(--nav-font-size);
+    font-family: inherit;
+    font-weight: var(--font-weight-regular);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--btn-solid-bg);
+    color: var(--btn-solid-text);
+    border-color: var(--btn-solid-bg);
+}
+
+/* --- Gallery Wrapper & Track --- */
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    /* Constrain max width for ultra-wide screens */
+    padding: 0 var(--nav-padding-x);
+    margin-bottom: 40px;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 16px;
+    /* Space for hidden scrollbar */
+    /* Hide scrollbar for a clean look */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+/* --- Gallery Items --- */
+.gallery-item {
+    flex-shrink: 0;
+}
+
+/* Desktop: Horizontal Aspect Ratio */
+.img-slot-gallery {
+    width: 800px;
+    height: 500px;
+    background-color: #e2e2e2;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Placeholder Icon */
+.img-slot-gallery::after {
+    content: '';
+    width: 64px;
+    height: 64px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23b0b0b0" xmlns="http://www.w3.org/2000/svg"><path d="M21 19V5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19ZM8.5 13.5L11 16.5L14.5 12L19 18H5L8.5 13.5Z"/></svg>');
+    background-size: cover;
+}
+
+/* --- Scroll Arrows --- */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--btn-outline-border);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-arrow {
+    left: 32px;
+}
+
+.right-arrow {
+    right: 32px;
+}
+
+.gallery-footer a {
+    text-decoration: none;
+}
+
+/* =========================================
+   MEDIA QUERY: Mobile Responsiveness (Gallery)
+   ========================================= */
+@media (max-width: 768px) {
+    .gallery-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .gallery-wrapper {
+        padding: 0 24px;
+    }
+
+    /* Mobile: Vertical Aspect Ratio */
+    .img-slot-gallery {
+        width: 80vw;
+        /* Takes up most of the screen width */
+        height: 60vh;
+        /* Taller vertical image */
+    }
+
+    .scroll-arrow {
+        display: none !important;
+        /* Hide custom arrows on mobile, let users swipe natively */
+    }
+
+    .gallery-filters {
+        flex-wrap: wrap;
+        /* Allow filters to wrap on small screens */
+        justify-content: center;
+        padding: 0 24px;
+    }
+}
+
+/* =========================================
+   CONTACT SECTION (DESKTOP)
+   ========================================= */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--hero-padding-y) var(--nav-padding-x);
+    background-color: var(--bg-color);
+    gap: 64px;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 480px;
+}
+
+.contact-info h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 16px 0 24px 0;
+    color: var(--text-color);
+}
+
+.contact-info .description {
+    font-size: 1.125rem;
+    margin-bottom: 48px;
+    color: var(--text-color);
+}
+
+/* --- Contact Info Items --- */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-item svg {
+    margin-top: 4px;
+}
+
+.contact-item h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-item a,
+.contact-item p {
+    color: var(--text-color);
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.contact-item p {
+    text-decoration: none;
+}
+
+/* --- Form Card Container --- */
+.contact-form-card {
+    flex: 1;
+    max-width: 540px;
+    border: 1px solid var(--btn-outline-border);
+    border-radius: 8px;
+    padding: 40px;
+    background-color: var(--bg-color);
+}
+
+/* --- Step Progress Bar --- */
+.step-progress {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--btn-outline-border);
+    z-index: 1;
+}
+
+.step-node {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--btn-outline-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.step-node.active {
+    border-color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.step-node.completed {
+    background-color: var(--bg-color);
+    border-color: var(--btn-outline-border);
+}
+
+/* --- Form Steps --- */
+.form-step {
+    display: none;
+    /* Hidden by default */
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step h3 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.step-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+}
+
+/* --- Form Inputs --- */
+.form-group {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--btn-outline-border);
+    border-radius: 6px;
+    background-color: #e8e8e8;
+    /* Soft grey background from wireframe */
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-wrapper input {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 12px;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.input-icon-right {
+    position: absolute;
+    right: 12px;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* --- Option Grids (Service Types & Scale) --- */
+.option-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.grid-2x2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3x2 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.option-btn {
+    padding: 12px 16px;
+    border: 1px solid var(--btn-outline-border);
+    border-radius: 6px;
+    background-color: #e8e8e8;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.option-btn span {
+    font-weight: 700;
+    border: 1px solid var(--btn-outline-border);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.option-btn.selected {
+    background-color: var(--btn-solid-bg);
+    color: var(--btn-solid-text);
+    border-color: var(--btn-solid-bg);
+}
+
+.option-btn.selected span {
+    background-color: var(--btn-solid-bg);
+    color: var(--btn-solid-text);
+    border-color: var(--btn-solid-text);
+}
+
+/* --- Action Buttons --- */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* =========================================
+   MEDIA QUERY: Mobile Responsiveness (Contact)
+   ========================================= */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 40px;
+    }
+
+    .contact-info {
+        max-width: 100%;
+    }
+
+    .contact-info h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px;
+    }
+
+    .grid-3x2 {
+        grid-template-columns: 1fr 1fr;
+        /* Drop 3 columns to 2 on small screens */
+    }
+}
