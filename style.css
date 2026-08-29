@@ -870,6 +870,7 @@ body {
         display: none; 
     }
     
+    
     .menu-toggle { 
         display: flex; /* Turns the box on, revealing the styled bars inside */
     }
