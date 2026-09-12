@@ -1,0 +1,646 @@
+/* Root Variables for Consistency */
+:root {
+    /* Color Palette */
+    --bg-primary: #0B1121;
+    --bg-glass: rgba(21, 30, 50, 0.6);
+    /* Semi-transparent for glass */
+    --accent-mint: #00DDA2;
+    --text-main: #FFFFFF;
+    --text-muted: #94A3B8;
+
+    /* Spacing System */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+    /* SF Pro Font Stack */
+    --font-main: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Typography Utilities */
+.mint-text {
+    color: var(--accent-mint);
+}
+
+.accent {
+    color: var(--accent-mint);
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* -----------------------------
+   Loading Screen
+------------------------------ */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+.logo {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+/* -----------------------------
+   Glassmorphism Utility
+------------------------------ */
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+/* -----------------------------
+   App Layout & Spacing
+------------------------------ */
+#app-content {
+    padding: var(--space-md);
+    padding-bottom: 100px;
+    /* Room for bottom nav */
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.greeting h2 {
+    font-size: 24px;
+    margin-bottom: var(--space-xs);
+}
+
+.greeting p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--text-muted);
+    /* Placeholder */
+}
+
+/* Segment Control */
+.segment-wrapper {
+    margin-bottom: var(--space-lg);
+}
+
+.segment-control {
+    display: flex;
+    padding: var(--space-xs);
+    border-radius: 12px;
+}
+
+.segment-btn {
+    flex: 1;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.segment-btn.active {
+    background: var(--bg-primary);
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Date Tracker */
+.date-tracker {
+    display: flex;
+    gap: var(--space-sm);
+    overflow-x: auto;
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.date-tracker::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar Chrome */
+
+.date-pill {
+    min-width: 50px;
+    padding: var(--space-sm) 0;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.date-pill.active {
+    border-color: var(--accent-mint);
+    color: var(--accent-mint);
+}
+
+.date-pill .day {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.date-pill .date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* Month Label */
+.month-label {
+    font-size: 16px;
+    color: var(--text-main);
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Updated Cards Layout using CSS Grid */
+.cards-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Creates two equal columns */
+    gap: var(--space-md);
+}
+
+.card {
+    grid-column: span 2;
+    /* By default, cards stretch across both columns */
+    height: 120px;
+    border-radius: 16px;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+/* Target exactly the 2nd and 3rd cards to be side-by-side squares */
+.card:nth-child(2),
+.card:nth-child(3) {
+    grid-column: span 1;
+    /* These only take up one column each */
+    aspect-ratio: 1 / 1;
+    /* Forces them to be perfect squares */
+    height: auto;
+    /* Overrides the 120px height so they scale perfectly */
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: var(--space-md);
+    left: var(--space-md);
+    right: var(--space-md);
+    display: flex;
+    justify-content: space-around;
+    padding: var(--space-md);
+    border-radius: 24px;
+    z-index: 100;
+}
+
+.nav-item {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.nav-item.active {
+    color: var(--accent-mint);
+    font-weight: bold;
+}
+
+/* Card 1: Momentum Structure */
+.momentum-card {
+    height: auto;
+    /* Lets the card expand dynamically based on contents */
+    min-height: 220px;
+}
+
+.momentum-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+
+/* 1. The Rings Container */
+.rings-container {
+    position: relative;
+    /* Crucial: Keeps the absolute text trapped inside this box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+}
+
+/* 2. The SVG Canvas */
+.progress-rings {
+    transform: rotate(-90deg);
+}
+
+/* 3. The Tracks (Faint background circles) */
+.ring-track {
+    fill: none !important;
+    /* Kills the default black void */
+    stroke: rgba(148, 163, 184, 0.1);
+    stroke-width: 8px !important;
+    /* Thickens the lines */
+}
+
+/* 4. The Fills (The neon progress lines) */
+.ring-fill {
+    fill: none !important;
+    /* Kills the default black void */
+    stroke-width: 8px !important;
+    /* Thickens the lines */
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 5. The Center Text */
+.momentum-score {
+    position: absolute;
+    /* Forces the text to float dead-center over the rings */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+#score-value {
+    font-size: 28px;
+    /* Slightly bigger for the new 160px size */
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.score-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+/* Updated Math for Bigger Rings (C = 2 * pi * r) */
+/* Academics: r=70 (Circumference: 440) */
+.ring-academics {
+    stroke: #00D4FF;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+/* Skills: r=50 (Circumference: 314) */
+.ring-skills {
+    stroke: #9D4EDD;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+}
+
+/* Habits: r=30 (Circumference: 188) */
+.ring-habits {
+    stroke: var(--accent-mint);
+    stroke-dasharray: 188;
+    stroke-dashoffset: 188;
+}
+
+/* The Graph Structure & Axes */
+.graph-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.graph-title {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.graph-axes-container {
+    display: flex;
+    height: 120px;
+    /* Gives the bars actual room to grow */
+}
+
+/* Y-Axis Line */
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 8px;
+    color: var(--text-muted);
+    padding-right: 6px;
+    border-right: 1px solid rgba(148, 163, 184, 0.3);
+    text-align: right;
+}
+
+/* X-Axis Line */
+.x-axis-content {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    padding-left: 8px;
+    padding-bottom: 4px;
+}
+
+.graph-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- GRAPH HEIGHT FIX --- */
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Forces bars to grow from the bottom up */
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    height: 100%;
+    /* CRITICAL: Gives the percentage heights a canvas to draw on */
+}
+
+.bar {
+    width: 10px;
+    /* Made slightly thicker so they are highly visible */
+    background: var(--bg-glass);
+    border-radius: 4px;
+    transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 4px;
+    /* Ensures even a 0-point day has a tiny visible dot */
+}
+
+/* Ensure the active/today bar pops */
+.bar.active {
+    background: var(--accent-mint);
+    box-shadow: 0 0 8px rgba(0, 221, 162, 0.4);
+}
+
+.day-label {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+/* --- TASKS VIEW --- */
+.task-lane {
+    margin-bottom: var(--space-xl);
+}
+
+.lane-header {
+    margin-bottom: var(--space-md);
+}
+
+.lane-header h3 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.lane-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Box */
+.add-task-box {
+    display: flex;
+    padding: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+#new-habit-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 14px;
+    outline: none;
+}
+
+#new-habit-input::placeholder {
+    color: var(--text-muted);
+}
+
+#btn-add-habit {
+    background: var(--bg-primary);
+    color: var(--accent-mint);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Habit List & Custom Checkboxes */
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--bg-glass);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Hide the default ugly browser checkbox */
+.habit-item input[type="checkbox"] {
+    display: none;
+}
+
+/* Create our own custom neon circle checkbox */
+.custom-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    margin-right: var(--space-md);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.habit-item.completed .custom-checkbox {
+    border-color: var(--accent-mint);
+    background: var(--accent-mint);
+}
+
+/* The checkmark inside the circle */
+.custom-checkbox::after {
+    content: '✓';
+    color: var(--bg-primary);
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+}
+
+.habit-item.completed .custom-checkbox::after {
+    opacity: 1;
+}
+
+.habit-text {
+    font-size: 16px;
+    color: var(--text-main);
+    transition: color 0.2s;
+}
+
+.habit-item.completed .habit-text {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+/* --- View More Constraint System --- */
+.habit-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+/* When collapsed, hide any habit item that is the 5th child or greater */
+.habit-list.collapsed .habit-item:nth-child(n+5) {
+    display: none;
+}
+
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-sm);
+}
+
+#btn-view-more-habits {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.3s;
+}
+
+#btn-view-more-habits:active {
+    color: var(--accent-mint);
+}
+
+/* Delete Button */
+.delete-habit-btn {
+    margin-left: auto;
+    /* Pushes the button to the far right */
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: color 0.2s;
+}
+
+.delete-habit-btn:hover {
+    color: #EF4444;
+    /* Red on hover */
+}
+
+/* --- LINE GRAPH STYLING --- */
+.graph-labels-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.graph-labels-container .day-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    width: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.graph-line {
+    fill: none;
+    stroke: var(--accent-mint);
+    stroke-width: 2px;
+}
+
+.graph-dot {
+    fill: var(--bg-primary);
+    stroke: var(--accent-mint);
+    stroke-width: 2px;
+}
+
+.graph-dot.today-dot {
+    fill: var(--accent-mint);
+    /* Solid mint for today */
+}
+
+.today-bar {
+    fill: rgba(0, 221, 162, 0.15);
+    /* Faint mint glowing column */
+}

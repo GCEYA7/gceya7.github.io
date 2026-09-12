@@ -1,0 +1,187 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F7FE;
+    color: #2B3674;
+    margin: 0;
+    padding: 2rem;
+}
+
+.brand-wrapper {
+    display: flex;
+    /* This forces everything inside onto one single line */
+    align-items: center;
+    /* This perfectly centers the logo and text vertically */
+    gap: 1rem;
+    /* This adds a clean space between the logo and the text */
+}
+
+.logo
+
+.system-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.system-header {
+    margin-bottom: 2rem;
+}
+
+.system-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.system-header p {
+    color: #A3AED0;
+    font-weight: 500;
+}
+
+/* The Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+/* Panel Styling */
+.panel {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 0.5rem;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 0.8rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4318FF;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.helper-text {
+    font-size: 0.8rem;
+    color: #A3AED0;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    background-color: #4318FF;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3311CC;
+}
+
+.btn-secondary {
+    width: 100%;
+    background-color: #E2E8F0;
+    color: #A3AED0;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: not-allowed;
+}
+
+/* Receipt Styling */
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.highlight-discount {
+    color: #01B574;
+    font-weight: 600;
+}
+
+.receipt-divider {
+    border: none;
+    border-top: 1px dashed #E2E8F0;
+    margin: 1.5rem 0;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+
+    /* 1. Stack the panels vertically */
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 2. Shrink the main background padding so it fits phone screens better */
+    body {
+        padding: 1rem;
+    }
+
+    /* 3. Scale down the header text slightly */
+    .system-header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* 4. Keep the logo and text aligned but allow them to wrap if needed */
+    .brand-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 5. Center the header text on mobile */
+    .system-header {
+        text-align: center;
+    }
+}

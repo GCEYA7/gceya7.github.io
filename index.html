@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gceya 7 — Akhanani Gceya | Web Designer & Developer</title>
+  <meta name="description" content="Portfolio of Akhanani Gceya — UI/UX Designer, Web Developer, and AI Automation Specialist creating modern digital experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="#hero" class="logo"><img src="images/gceya7.svg" alt="Gceya7" style="height:28px"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active" data-section="hero">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a></li>
+      <li><a href="#about" class="nav-link" data-section="about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>About</span>
+      </a></li>
+      <li><a href="#services" class="nav-link" data-section="services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>Services</span>
+      </a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <span>Projects</span>
+      </a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Contact</span>
+      </a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header" id="mobileHeader">
+    <a href="#hero" class="logo"><img src="images/gceya7.svg" alt="Gceya7" style="height:28px"></a>
+    <div class="mobile-controls">
+      <button class="theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link active">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+      <div class="parallax-bg" data-speed="0.3">
+        <div class="hero-grid"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-text" data-parallax="0.1">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Akhanani <span>Gceya</span></h1>
+          <h2 class="hero-title">Web Designer, Developer & AI Automation</h2>
+          <p class="hero-desc">I'm a 2nd-year Computer Science student at UWC. I design and build websites, mostly for small businesses and organisations that need an online presence. I'm self-taught in frontend, learning the rest as I go, and building things for real people.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><span class="stat-number" data-count="10">0</span><span class="stat-label">Projects</span></div>
+            <div class="stat"><span class="stat-number" data-count="5">0</span><span class="stat-label">Clients</span></div>
+            <div class="stat"><span class="stat-number" data-count="2">0</span><span class="stat-label">Years Exp</span></div>
+          </div>
+        </div>
+        <div class="hero-image" data-parallax="0.2">
+          <div class="hero-image-wrapper">
+            <img src="images/heroimage.png" alt="Akhanani Gceya portrait" loading="eager">
+            <div class="hero-image-border"></div>
+          </div>
+          <div class="floating-badge badge-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Developer
+          </div>
+          <div class="floating-badge badge-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.92L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.57 3.25 3.92"/><circle cx="12" cy="6" r="1"/></svg>
+            AI Automation
+          </div>
+          <div class="floating-badge badge-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v18M3 12h18" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+            UI/UX Design
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" data-parallax="0.4">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Get To Know Me</span>
+          <h2 class="section-title">About <span>Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-content fade-in">
+            <h3>A Passionate Developer Building Digital Solutions</h3>
+        
+            <p>I've always been the kid who takes things apart to see how they work. That curiosity is what led me to Computer
+              Science — not because someone told me to, but because I genuinely enjoy figuring things out. I started teaching
+              myself programming in high school, and now I'm in my second year at UWC learning the formal side of it.
+            </p>
+        
+            <p>I build websites for real people and real businesses, and every project teaches me something new. I design in
+              Figma, build with HTML, CSS, and JavaScript, and I'm exploring AI automation to work smarter. The end goal is to
+              finish my degree, keep building, and fund my way to becoming a pilot.</p>
+        
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-label">Name:</span>
+                <span class="detail-value">Akhanani Gceya</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Location:</span>
+                <span class="detail-value">South Africa</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Study:</span>
+                <span class="detail-value">Computer Science @ UWC</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Email:</span>
+                <span class="detail-value">gakhanani@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        
+          <div class="skills-grid fade-in">
+            <div class="skill-item">
+              <span class="skill-name">Web Design</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+        
+            <div class="skill-item">
+              <span class="skill-name">Web Development</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+        
+            <div class="skill-item">
+              <span class="skill-name">Figma / UI-UX</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+        
+            <div class="skill-item">
+              <span class="skill-name">Java (OOP)</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+        
+            <div class="skill-item">
+              <span class="skill-name">AI Automation</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="section-title">My <span>Services</span></h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3>Web Design</h3>
+            <p>I design the layout and look of your site in Figma before any code gets written. You'll see exactly what you're getting before I build it — wireframes, mockups, and interactive prototypes.</p>
+            <ul class="service-features">
+              <li>Figma Prototyping</li>
+              <li>UI/UX Design</li>
+              <li>Responsive Layouts</li>
+              <li>Design Systems</li>
+            </ul>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>I turn designs into working, responsive websites. Clean HTML, CSS, and JavaScript — no frameworks, no bloat. Just fast, accessible sites that look great on every device.</p>
+            <ul class="service-features">
+              <li>HTML / CSS</li>
+              <li>Vanilla JavaScript</li>
+              <li>Responsive Design</li>
+              <li>Cross-Browser Support</li>
+            </ul>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3>App Design</h3>
+            <p>Mobile-first UI designs for apps and mobile experiences. I prototype in Figma so you can tap through the design before a single line of code is written.</p>
+            <ul class="service-features">
+              <li>Mobile UI/UX</li>
+              <li>Figma Prototypes</li>
+              <li>User Flow Mapping</li>
+              <li>Design Handoff</li>
+            </ul>
+          </div>
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.92L12 22"/><path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.57 3.25 3.92"/><circle cx="12" cy="6" r="1"/><path d="M5 12h2"/><path d="M17 12h2"/><path d="M7.5 7.5L9 9"/><path d="M15 15l1.5 1.5"/><path d="M16.5 7.5L15 9"/><path d="M9 15l-1.5 1.5"/></svg>
+            </div>
+            <h3>AI Automation</h3>
+            <p>Leveraging AI tools and workflow automation to streamline repetitive tasks and boost productivity. I help businesses work smarter by setting up AI-powered solutions that save time and effort.</p>
+            <ul class="service-features">
+              <li>AI Workflow Design</li>
+              <li>Chatbot Integration</li>
+              <li>Process Automation</li>
+              <li>AI-Powered Tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">My Portfolio</span>
+          <h2 class="section-title">Featured <span>Projects</span></h2>
+        </div>
+        <div class="project-tabs fade-in">
+          <button class="tab-btn active" data-target="java-projects">Java Projects</button>
+          <button class="tab-btn" data-target="web-design">Web Design</button>
+          <button class="tab-btn" data-target="app-design">App Design</button>
+          <button class="tab-btn" data-target="dev-interfaces">Developed Websites</button>
+        </div>
+
+        <!-- Java Projects Tab -->
+        <div class="tab-content active" id="java-projects">
+          <div class="spotify-tracklist">
+            <div class="track-strip">
+              <img src="images/icons/java-icon.svg" alt="Java" class="track-icon">
+              <div class="track-info">
+                <h4>Hotel Management System</h4>
+                <p>A console-based hotel booking system with room types, tiered discounts, and returning customer logic — built for my OOP module at UWC.</p>
+              </div>
+              <div class="track-actions">
+                <a href="hotel-system/" target="_blank" class="track-action view-ui">View UI &#8599;</a>
+                <div class="track-action open-code" data-code="hotel-java-code" data-title="HotelManagement.java">View Code</div>
+              </div>
+            </div>
+            <div class="hidden-code-container">
+              <div id="hotel-java-code">import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class hotelcostcalculator {
+    @SuppressWarnings("ConvertToTryWithResources")
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList&lt;String&gt; users = new ArrayList&lt;&gt;(Arrays.asList("AKHANANI GCEYA", "LIONEL MESSI"));
+
+        System.out.println("Welcome to Akha Gceya's Hotel! Please enter your name: ");
+        String userName = scanner.nextLine();
+        System.out.println();
+
+        if (users.contains(userName.toUpperCase())) {
+            System.out.println("Welcome back, " + userName + "! As a valued returning guest, you get an exclusive 3% discount on your total bill.");
+        } else {
+            System.out.println("Hello, " + userName + "! We're excited to have you at Akha Gceya's Hotel and look forward to providing you with excellent service.");
+            users.add(userName);
+        }
+
+        System.out.println();
+        System.out.println("--------------------- MENU ----------------------------");
+        System.out.println("           ROOM TYPE           COST PER ROOM");
+        System.out.println("           Standard            R400");
+        System.out.println("           Standard VIP        R600");
+        System.out.println("           High VIP            R1000");
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------------- DISCOUNTS ------------------------");
+        System.out.println("Standard: &gt; 5 rooms (12% off), &gt; 10 rooms (50% off)");
+        System.out.println("Standard VIP: &gt; 2 rooms (10% off), &gt; 5 rooms (30% off), &gt; 10 rooms (50% off)");
+        System.out.println("High VIP: &gt; 2 rooms (10% off), &gt; 10 rooms (40% off)");
+        System.out.println("Returning customers: Extra 3% off the discounted total");
+        System.out.println();
+
+        System.out.println("What type of room would you like to rent? Enter [Standard, Standard VIP, High VIP]: ");
+        String roomType = scanner.nextLine().toLowerCase().replaceAll("\\s", "").trim();
+        System.out.println("How many " + roomType + " rooms would you like to rent? (Enter a number from 1 to 30): ");
+        int roomQty = scanner.nextInt();
+        System.out.println();
+        System.out.println("You have selected " + roomQty + " " + roomType + " room(s). Please wait while we calculate your total cost...");
+
+        double disCost = 0;
+        switch (roomType) {
+            case "standard" -&gt; {
+                if (roomQty &gt; 10) {
+                    int cost = roomQty * 400;
+                    disCost = cost - cost * 0.5;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty &gt; 5) {
+                    int cost = roomQty * 400;
+                    disCost = cost - cost * 0.12;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else {
+                    int cost = roomQty * 400;
+                    disCost = cost;
+                    System.out.println("Total Cost: R" + disCost);
+                }
+            }
+            case "standardvip" -&gt; {
+                if (roomQty &gt; 10) {
+                    int cost = roomQty * 600;
+                    disCost = cost - cost * 0.5;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty &gt; 5) {
+                    int cost = roomQty * 600;
+                    disCost = cost - cost * 0.3;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty &gt; 2) {
+                    int cost = roomQty * 600;
+                    disCost = cost - cost * 0.1;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else {
+                    int cost = roomQty * 600;
+                    disCost = cost;
+                    System.out.println("Total Cost: R" + disCost);
+                }
+            }
+            case "highvip" -&gt; {
+                if (roomQty &gt; 10) {
+                    int cost = roomQty * 1000;
+                    disCost = cost - cost * 0.4;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else if (roomQty &gt; 2) {
+                    int cost = roomQty * 1000;
+                    disCost = cost - cost * 0.1;
+                    System.out.println("Original Cost: R" + cost + " | Discounted Cost: R" + disCost);
+                } else {
+                    int cost = roomQty * 1000;
+                    disCost = cost;
+                    System.out.println("Total Cost: R" + disCost);
+                }
+            }
+            default -&gt; {System.out.println("Invalid Choice!! Try Again");}
+        }
+
+        if (users.contains(userName.toUpperCase())) {
+            System.out.println("As a returning customer, you get an extra 3% off your discounted cost!");
+            double finalCost = disCost - (disCost * 0.03);
+            System.out.println("Final Cost after all discounts: R" + finalCost);
+        } else {
+            System.out.println("Thank you, " + userName + "! We hope to see you again so you can enjoy our 3% returning customer discount.");
+        }
+
+        scanner.close();
+    }
+}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Design Tab -->
+        <div class="tab-content" id="web-design">
+          <div class="design-grid">
+            <div class="design-card" data-full-image="images/projects/profile-full.png">
+              <img src="images/projects/profile.png" alt="Gceya Profile Thumbnail" class="card-bg">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <svg class="figma-icon" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg>
+                <div class="card-text">
+                  <h4>Gceya Profile Landing Page</h4>
+                  <p>Web Design</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-card" data-full-image="images/projects/raga-full.png">
+              <img src="images/projects/raga.png" alt="RAGA Thumbnail" class="card-bg">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <svg class="figma-icon" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg>
+                <div class="card-text">
+                  <h4>Raymond Ackerman Golf Academy Landing Page</h4>
+                  <p>Web Design</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-card" data-full-image="images/projects/wetutoryoulearn-full.png">
+              <img src="images/projects/wetutoryoulearn.png" alt="Wetutoryoulearn Thumbnail" class="card-bg">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <svg class="figma-icon" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg>
+                <div class="card-text">
+                  <h4>WeTutorYouLearn Business Page</h4>
+                  <p>Web Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Design Tab -->
+        <div class="tab-content" id="app-design">
+          <div class="design-grid">
+            <div class="design-card" data-full-image="images/projects/sabrina-full.png">
+              <img src="images/projects/sabrina.png" alt="Music App Thumbnail" class="card-bg">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <svg class="figma-icon" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg>
+                <div class="card-text">
+                  <h4>Sabrina Carpenter Music UI</h4>
+                  <p>App Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developed Websites Tab -->
+        <div class="tab-content" id="dev-interfaces">
+          <div class="design-grid">
+            <a href="https://ragaclovelly.co.za" target="_blank" class="live-site-link">
+              <div class="design-card live-site-card">
+                <img src="images/projects/raga.png" alt="RAGA Thumbnail" class="card-bg">
+                <div class="card-overlay live-overlay"></div>
+                <div class="card-content">
+                  <svg class="figma-icon" viewBox="0 0 24 24" fill="currentColor" style="width:28px;height:28px;color:#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <div class="card-text">
+                    <h4>Raymond Ackerman Golf Academy</h4>
+                    <p class="live-text">Live Website &#8599;</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="wetutoryoulearn/" target="_blank" class="live-site-link">
+              <div class="design-card live-site-card">
+                <img src="images/projects/wetutoryoulearn.png" alt="WeTutorYouLearn Thumbnail" class="card-bg">
+                <div class="card-overlay live-overlay"></div>
+                <div class="card-content">
+                  <svg class="figma-icon" viewBox="0 0 24 24" fill="currentColor" style="width:28px;height:28px;color:#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <div class="card-text">
+                    <h4>WeTutorYouLearn Platform</h4>
+                    <p class="live-text">Live Website &#8599;</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="khumalo" target="_blank" class="live-site-link">
+              <div class="design-card live-site-card">
+                <img src="images/projects/khumalo.png" alt="Khumalo Construction Thumbnail" class="card-bg">
+                <div class="card-overlay live-overlay"></div>
+                <div class="card-content">
+                  <svg class="figma-icon" viewBox="0 0 24 24" fill="currentColor" style="width:28px;height:28px;color:#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <div class="card-text">
+                    <h4>Khumalo Construction</h4>
+                    <p class="live-text">Live Website &#8599;</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="habbit-tracker/" target="_blank" class="live-site-link">
+              <div class="design-card live-site-card">
+                <img src="images/projects/habbit.png" alt="Habbit Tracker Thumbnail" class="card-bg">
+                <div class="card-overlay live-overlay"></div>
+                <div class="card-content">
+                  <svg class="figma-icon" viewBox="0 0 24 24" fill="currentColor" style="width:28px;height:28px;color:#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <div class="card-text">
+                    <h4>Habit Tracker</h4>
+                    <p class="live-text">Live Website &#8599;</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Modal -->
+    <div id="codeModal" class="modal-overlay">
+      <div class="code-container">
+        <div class="code-header">
+          <span class="mac-btn red"></span>
+          <span class="mac-btn yellow"></span>
+          <span class="mac-btn green"></span>
+          <span id="code-title" class="code-filename">Algorithm.java</span>
+        </div>
+        <pre><code id="code-display">/* Code will load here */</code></pre>
+      </div>
+    </div>
+
+    <!-- Design Lightbox -->
+    <div id="designLightbox" class="modal-overlay">
+      <div class="lightbox-scroll-container">
+        <img src="" alt="Full Design View" id="lightbox-image">
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span>Touch</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info fade-in">
+            <h3>Let's work together</h3>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities. Whether you need a website, app design, or AI-powered automation, let's talk. I try to respond within 24 hours.</p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">gakhanani@gmail.com</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">South Africa</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Availability</span>
+                  <span class="contact-value">Open for freelance</span>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/gceya7" target="_blank" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://wa.me/+27784886619" target="_blank" class="social-link" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/akha_gceya7/" target="_blank" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="mailto:gakhanani@gmail.com" class="social-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form fade-in" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              </span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Message sent successfully! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2026 Gceya 7. All rights reserved. | Designed & Built by Akhanani Gceya</p>
+          <div class="footer-social">
+            <a href="https://github.com/gceya7" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+            <a href="https://wa.me/+27784886619" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <a href="https://www.instagram.com/akha_gceya7/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="mailto:gakhanani@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
