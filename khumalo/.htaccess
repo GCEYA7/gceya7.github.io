@@ -1,0 +1,34 @@
+# Khumalo Construction - Admin Panel .htaccess
+RewriteEngine On
+
+# Security: Prevent access to sensitive files
+<FilesMatch "\.(json|php|log|git)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to content.json for the frontend
+<Files "content.json">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Admin panel - optional pretty URLs
+# RewriteRule ^admin/?$ admin/index.php [L]
+# RewriteRule ^admin/login/?$ admin/login.php [L]
+# RewriteRule ^admin/logout/?$ admin/logout.php [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# PHP settings for uploads
+<IfModule mod_php.c>
+    php_value upload_max_filesize 50M
+    php_value post_max_size 50M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>

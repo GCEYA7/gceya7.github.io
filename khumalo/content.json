@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-09-19T22:49:00Z",
+  "gallery": {
+    "categories": [
+      {
+        "id": "residential-construction",
+        "name": "Residential Construction",
+        "icon": "home",
+        "type": "images",
+        "items": [
+          { "src": "assets/residential construction/1.jpg", "alt": "Residential construction project", "caption": "New build foundation work" },
+          { "src": "assets/residential construction/2.jpg", "alt": "Residential construction project", "caption": "Structural framework" },
+          { "src": "assets/residential construction/3.jpg", "alt": "Residential construction project", "caption": "Exterior brickwork" },
+          { "src": "assets/residential construction/4.jpg", "alt": "Residential construction project", "caption": "Completed residential home" }
+        ]
+      },
+      {
+        "id": "renovation",
+        "name": "Renovation",
+        "icon": "hammer",
+        "type": "images",
+    
+        "items": [
+          { "src": "assets/renovation/1.jpg", "alt": "Renovation project", "caption": "Kitchen renovation" },
+          { "src": "assets/renovation/2.jpg", "alt": "Renovation project", "caption": "Bathroom remodel" },
+          { "src": "assets/renovation/3.jpg", "alt": "Renovation project", "caption": "Living room transformation" },
+          { "src": "assets/renovation/4.jpg", "alt": "Renovation project", "caption": "Full home renovation" },
+          { "src": "assets/renovation/5.jpg", "alt": "Renovation project", "caption": "Exterior facade update" },
+          { "src": "assets/renovation/6.jpg", "alt": "Renovation project", "caption": "Basement finishing" },
+          { "src": "assets/renovation/7.jpg", "alt": "Renovation project", "caption": "Attic conversion" },
+          { "src": "assets/renovation/8.jpg", "alt": "Renovation project", "caption": "Deck and patio renovation" },
+          { "src": "assets/renovation/9.jpg", "alt": "Renovation project", "caption": "Garage remodeling" },
+          { "src": "assets/renovation/10.jpg", "alt": "Renovation project", "caption": "Window replacement" },
+          { "src": "assets/renovation/11.jpg", "alt": "Renovation project", "caption": "Door installation" },
+          { "src": "assets/renovation/12.jpg", "alt": "Renovation project", "caption": "Flooring upgrade" },
+          { "src": "assets/renovation/13.jpg", "alt": "Renovation project", "caption": "Roof repair" },
+          { "src": "assets/renovation/14.jpg", "alt": "Renovation project", "caption": "Exterior painting" },
+          { "src": "assets/renovation/15.jpg", "alt": "Renovation project", "caption": "Interior painting" },
+          { "src": "assets/renovation/16.jpg", "alt": "Renovation project", "caption": "Custom cabinetry" },
+          { "src": "assets/renovation/17.jpg", "alt": "Renovation project", "caption": "Lighting installation" },
+          { "src": "assets/renovation/18.jpg", "alt": "Renovation project", "caption": "Plumbing upgrades" },
+          { "src": "assets/renovation/19.jpg", "alt": "Renovation project", "caption": "Electrical rewiring" },
+          { "src": "assets/renovation/20.jpg", "alt": "Renovation project", "caption": "HVAC system installation" },
+          { "src": "assets/renovation/21.jpg", "alt": "Renovation project", "caption": "Insulation improvements" },
+          { "src": "assets/renovation/22.jpg", "alt": "Renovation project", "caption": "Exterior landscaping" },
+          { "src": "assets/renovation/23.jpg", "alt": "Renovation project", "caption": "Interior design enhancements" },
+          { "src": "assets/renovation/24.jpg", "alt": "Renovation project", "caption": "Custom furniture installation" },
+          { "src": "assets/renovation/25.jpg", "alt": "Renovation project", "caption": "Smart home integration" },
+          { "src": "assets/renovation/26.jpg", "alt": "Renovation project", "caption": "Energy-efficient upgrades" },
+          { "src": "assets/renovation/27.jpg", "alt": "Renovation project", "caption": "Outdoor living space creation" },
+          { "src": "assets/renovation/28.jpg", "alt": "Renovation project", "caption": "Home office setup" }
+        ]
+      },
+      {
+        "id": "decorative-art-painting",
+        "name": "Decorative Art & Painting",
+        "icon": "palette",
+        "type": "images",
+        "items": [
+          { "src": "assets/decorative-art/1.jpg", "alt": "Painting project", "caption": "Interior painting" },
+          { "src": "assets/decorative-art/2.jpg", "alt": "Painting project", "caption": "Exterior paint finish" },
+          { "src": "assets/decorative-art/3.jpg", "alt": "Decorative art project", "caption": "Stone feature wall" },
+          { "src": "assets/decorative-art/4.jpg", "alt": "Decorative art project", "caption": "Custom decorative finishes" },
+          { "src": "assets/decorative-art/5.jpg", "alt": "Decorative art project", "caption": "Artistic wall texture" },
+          { "src": "assets/decorative-art/6.jpg", "alt": "Decorative art project", "caption": "Ceramic tile work" },
+          { "src": "assets/decorative-art/7.jpg", "alt": "Decorative art project", "caption": "Custom wall art" },
+          { "src": "assets/decorative-art/8.jpg", "alt": "Decorative art project", "caption": "Handcrafted decorative elements" },
+          { "src": "assets/decorative-art/9.jpg", "alt": "Decorative art project", "caption": "Artistic ceiling design" },
+          { "src": "assets/decorative-art/10.jpg", "alt": "Decorative art project", "caption": "Custom mural painting" },
+          { "src": "assets/decorative-art/11.jpg", "alt": "Decorative art project", "caption": "Decorative plaster finish" },
+          { "src": "assets/decorative-art/12.jpg", "alt": "Decorative art project", "caption": "Artistic wall paneling" },
+          { "src": "assets/decorative-art/13.jpg", "alt": "Decorative art project", "caption": "Custom decorative moldings" },
+          { "src": "assets/decorative-art/14.jpg", "alt": "Decorative art project", "caption": "Artistic wall stenciling" },
+          { "src": "assets/decorative-art/15.jpg", "alt": "Decorative art project", "caption": "Decorative ceiling medallions" },
+          { "src": "assets/decorative-art/16.jpg", "alt": "Painting project", "caption": "Interior painting" },
+          { "src": "assets/decorative-art/17.jpg", "alt": "Painting project", "caption": "Exterior paint finish" },
+          { "src": "assets/decorative-art/18.jpg", "alt": "Decorative art project", "caption": "Stone feature wall" },
+          { "src": "assets/decorative-art/19.jpg", "alt": "Decorative art project", "caption": "Custom decorative finishes" },
+          { "src": "assets/decorative-art/20.jpg", "alt": "Decorative art project", "caption": "Artistic wall texture" },
+          { "src": "assets/decorative-art/21.jpg", "alt": "Decorative art project", "caption": "Ceramic tile work" },
+          { "src": "assets/decorative-art/22.jpg", "alt": "Decorative art project", "caption": "Custom wall art" },
+          { "src": "assets/decorative-art/23.jpg", "alt": "Decorative art project", "caption": "Handcrafted decorative elements" },
+          { "src": "assets/decorative-art/24.jpg", "alt": "Decorative art project", "caption": "Artistic ceiling design" },
+          { "src": "assets/decorative-art/25.jpg", "alt": "Decorative art project", "caption": "Custom mural painting" },
+          { "src": "assets/decorative-art/26.jpg", "alt": "Decorative art project", "caption": "Decorative plaster finish" },
+          { "src": "assets/decorative-art/27.jpg", "alt": "Decorative art project", "caption": "Artistic wall paneling" },
+          { "src": "assets/decorative-art/28.jpg", "alt": "Decorative art project", "caption": "Custom decorative moldings" },
+          { "src": "assets/decorative-art/29.jpg", "alt": "Decorative art project", "caption": "Artistic wall stenciling" },
+          { "src": "assets/decorative-art/30.jpg", "alt": "Decorative art project", "caption": "Decorative ceiling medallions" },
+          { "src": "assets/decorative-art/31.jpg", "alt": "Painting project", "caption": "Exterior paint finish" },
+          { "src": "assets/decorative-art/32.jpg", "alt": "Decorative art project", "caption": "Stone feature wall" },
+          { "src": "assets/decorative-art/33.jpg", "alt": "Decorative art project", "caption": "Custom decorative finishes" },
+          { "src": "assets/decorative-art/34.jpg", "alt": "Decorative art project", "caption": "Artistic wall texture" },
+          { "src": "assets/decorative-art/35.jpg", "alt": "Decorative art project", "caption": "Ceramic tile work" },
+          { "src": "assets/decorative-art/36.jpg", "alt": "Decorative art project", "caption": "Custom wall art" },
+          { "src": "assets/decorative-art/37.jpg", "alt": "Decorative art project", "caption": "Handcrafted decorative elements" },
+          { "src": "assets/decorative-art/38.jpg", "alt": "Decorative art project", "caption": "Artistic ceiling design" },
+          { "src": "assets/decorative-art/39.jpg", "alt": "Decorative art project", "caption": "Custom mural painting" },
+          { "src": "assets/decorative-art/40.jpg", "alt": "Decorative art project", "caption": "Decorative ceiling medallions" }
+        ]
+      },
+      {
+        "id": "videos",
+        "name": "Videos",
+        "icon": "video",
+        "type": "videos",
+        "color": "orange",
+        "items": [
+          { "src": "assets/videos/1.mp4", "alt": "Construction work in progress", "caption": "Foundation pouring", "poster": "assets/videos/poster-1.jpg" },
+          { "src": "assets/videos/2.mp4", "alt": "Renovation process", "caption": "Wall demolition", "poster": "assets/videos/poster-2.jpg" },
+          { "src": "assets/videos/3.mp4", "alt": "Plastering technique", "caption": "Smooth plaster finish", "poster": "assets/videos/poster-3.jpg" },
+          { "src": "assets/videos/4.mp4", "alt": "Decorative art process", "caption": "Stone masonry work", "poster": "assets/videos/poster-4.jpg" }
+        ]
+      }
+    ]
+  }
+}
