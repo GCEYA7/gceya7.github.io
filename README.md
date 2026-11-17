@@ -1,5 +1,5 @@
-<h1 align="center">Hi, I'm Akhanani Gceya ðŸ‘‹</h1>
-<p align="center">Web designer Â· Developer Â· AI automation â€” building for real people.</p>
+<h1 align="center">Hi, I'm Akhanani Gceya :wave:</h1>
+<p align="center">Web designer - Developer - AI automation -- building for real people.</p>
 
 <p align="center">
   <a href="https://akha.gakhanani.workers.dev"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-akha.gakhanani.workers.dev-f24e1e?style=flat-square" /></a>
@@ -12,17 +12,17 @@
 
 ### About
 
-I take things apart to see how they work â€” that curiosity is what led me to Computer Science. I'm a second-year
+I take things apart to see how they work -- that curiosity is what led me to Computer Science. I'm a second-year
 student at the **University of the Western Cape**, and outside of class I design in Figma and build real websites
 for real businesses: from the first wireframe to a fully deployed, live site.
 
 I'm based in Cape Town, South Africa, currently open for freelance work, and working towards a bigger goal:
 becoming a pilot.
 
-- ðŸŽ“ Second-year Computer Science @ UWC
-- ðŸ› ï¸ Design â†’ build â†’ ship: Figma, HTML/CSS/JS, and increasingly AI-assisted workflows
-- ðŸ“ Cape Town, South Africa
-- ðŸ’¼ **[See the full interactive portfolio â†’](https://akha.gakhanani.workers.dev)**
+- :mortar_board: Second-year Computer Science @ UWC
+- :hammer_and_wrench: Design -> build -> ship: Figma, HTML/CSS/JS, and increasingly AI-assisted workflows
+- :round_pushpin: Cape Town, South Africa
+- :briefcase: **[See the full interactive portfolio ->](https://akha.gakhanani.workers.dev)**
 
 ### Tools I work with
 
@@ -45,7 +45,7 @@ becoming a pilot.
 
 | Project | What it is | Live |
 | --- | --- | --- |
-| **Zeenailist Academy** | Nail salon & academy â€” booking, pricing, course info | [zeenailist.co.za](https://zeenailist.co.za) |
+| **Zeenailist Academy** | Nail salon & academy -- booking, pricing, course info | [zeenailist.co.za](https://zeenailist.co.za) |
 | **Raymond Ackerman Golf Academy** | Education, life skills & golf coaching programme site | [ragaclovelly.co.za](https://ragaclovelly.co.za) |
 | **Khumalo Construction** | New builds, renovations & project management | [khumaloconstruction.co.za](https://khumaloconstruction.co.za) |
 
@@ -53,14 +53,14 @@ becoming a pilot.
 
 | Project | What it is | Live |
 | --- | --- | --- |
-| **WeTutorYouLearn** | Tutoring platform â€” online, in-person & one-on-one | *deploying on Cloudflare â€” link coming soon* |
-| **Habit Tracker** | Personal productivity web app for daily goals & sprints | *deploying on Cloudflare â€” link coming soon* |
+| **WeTutorYouLearn** | Tutoring platform -- online, in-person & one-on-one | *deploying on Cloudflare -- link coming soon* |
+| **Habit Tracker** | Personal productivity web app for daily goals & sprints | *deploying on Cloudflare -- link coming soon* |
 
 **School / academic project**
 
 | Project | What it is | Live |
 | --- | --- | --- |
-| **Hotel Management System** | Java Â· OOP coursework @ UWC | *deploying on Cloudflare â€” link coming soon* |
+| **Hotel Management System** | Java - OOP coursework @ UWC | *deploying on Cloudflare -- link coming soon* |
 
 Plus design work in Figma: landing pages and a music app UI.
 
@@ -68,7 +68,7 @@ Plus design work in Figma: landing pages and a music app UI.
 
 ### Get in touch
 
-Have a project in mind? Whether it's a new website, a fresh design or a smarter workflow â€” let's talk.
+Have a project in mind? Whether it's a new website, a fresh design or a smarter workflow -- let's talk.
 I reply within 24 hours.
 
-ðŸ“§ [gakhanani@gmail.com](mailto:gakhanani@gmail.com) Â· ðŸ’¬ [WhatsApp](https://wa.me/27784886619) Â· ðŸ“· [Instagram](https://www.instagram.com/akha_gceya7/) Â· ðŸŒ [akha.gakhanani.workers.dev](https://akha.gakhanani.workers.dev)
+:email: [gakhanani@gmail.com](mailto:gakhanani@gmail.com) - :speech_balloon: [WhatsApp](https://wa.me/27784886619) - :camera: [Instagram](https://www.instagram.com/akha_gceya7/) - :globe_with_meridians: [akha.gakhanani.workers.dev](https://akha.gakhanani.workers.dev)
