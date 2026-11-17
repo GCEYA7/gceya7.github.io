@@ -1,7 +1,3 @@
-/* Gceya 7 — GitHub profile promo page
-   One section: the portrait fills the screen, the empty half of the photo
-   becomes a panel with contacts and a single call to action. Pure CSS,
-   no build step, no JS — this is the whole site. */
 
 :root {
   --pink: #ddbdc2; /* panel surface — lifted slightly off the photo's own #d0a7ad for contrast */
@@ -199,11 +195,7 @@ h1 .dot {
   color: var(--muted);
 }
 
-/* ───────────── mobile: no photo — the panel alone fills the screen ─────────────
-   The portrait only reads as a composition at wide/landscape sizes where
-   there's room for its own empty half; cropped into a thin band above the
-   fold on a phone it just pushes the actual content (and the button) down.
-   Below the breakpoint we drop it and let the panel be the whole page. */
+
 
 @media (max-width: 760px), (max-aspect-ratio: 4/5) {
   html,
